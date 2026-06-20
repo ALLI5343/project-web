@@ -1,0 +1,311 @@
+/* --- RESET STYLE --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #040914 0%, #07162c 50%, #0f274d 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    color: #e2e8f0;
+}
+
+/* --- CONTAINER UTAMA (Glassmorphism Deep Blue) --- */
+.table-container {
+    width: 100%;
+    max-width: 1200px;
+    background: rgba(7, 22, 44, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(0, 170, 255, 0.15);
+    border-radius: 24px;
+    padding: 35px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5), 
+                0 0 50px rgba(0, 170, 255, 0.05);
+}
+
+/* --- HEADER --- */
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 25px;
+}
+
+.icon-title {
+    color: #00bfff;
+    margin-right: 8px;
+    text-shadow: 0 0 15px rgba(0, 191, 255, 0.6);
+}
+
+.header-text h2 {
+    font-size: 26px;
+    font-weight: 700;
+    background: linear-gradient(to right, #ffffff, #00bfff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.header-text p {
+    font-size: 14px;
+    color: #8da2c4;
+    margin-top: 6px;
+}
+
+/* --- KOTAK CARI (Search Box Neon) --- */
+.search-box {
+    position: relative;
+    width: 320px;
+}
+
+.search-box i {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #00bfff;
+    font-size: 14px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 12px 16px 12px 48px;
+    background: rgba(3, 10, 24, 0.8);
+    border: 1px solid rgba(0, 191, 255, 0.2);
+    border-radius: 14px;
+    color: #fff;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.search-box input:focus {
+    outline: none;
+    border-color: #00bfff;
+    box-shadow: 0 0 20px rgba(0, 191, 255, 0.4);
+}
+
+/* --- FILTER KONTROL BAR --- */
+.controls-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 25px 0 20px 0;
+    flex-wrap: wrap;
+}
+
+.filter-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #6c87b3;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-filter {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 8px 16px;
+    border-radius: 10px;
+    color: #8da2c4;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.25s ease;
+}
+
+.btn-filter:hover, .btn-filter.active {
+    background: #00bfff;
+    color: #040914;
+    border-color: #00bfff;
+    box-shadow: 0 4px 15px rgba(0, 191, 255, 0.3);
+}
+
+/* --- TABEL UTAMA --- */
+.table-wrapper {
+    overflow-x: auto;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 191, 255, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    background: rgba(4, 12, 27, 0.5);
+}
+
+th {
+    background: linear-gradient(90deg, #06152b 0%, #030a17 100%);
+    color: #00bfff;
+    padding: 18px 24px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid rgba(0, 191, 255, 0.2);
+}
+
+td {
+    padding: 16px 24px;
+    border-bottom: 1px solid rgba(0, 191, 255, 0.05);
+    font-size: 14px;
+    color: #cbdbee;
+    vertical-align: middle;
+}
+
+/* Animasi Baris saat di-Hover */
+tbody tr {
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+tbody tr:hover {
+    background: rgba(0, 191, 255, 0.03);
+    box-shadow: inset 4px 0 0 #00bfff;
+}
+
+/* --- DEKORASI SUB-KOMPONEN --- */
+.id-cell {
+    font-family: monospace;
+    font-weight: 600;
+    color: #4b6b9e;
+}
+
+.mountain-profile {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.mountain-profile strong {
+    display: block;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.mountain-profile span {
+    font-size: 12px;
+    color: #6c87b3;
+}
+
+/* Avatar Ikon */
+.avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 13px;
+}
+.av-blue { background: rgba(0, 132, 255, 0.15); color: #0084ff; border: 1px solid rgba(0, 132, 255, 0.25); }
+.av-cyan { background: rgba(0, 191, 255, 0.15); color: #00bfff; border: 1px solid rgba(0, 191, 255, 0.25); }
+.av-purple { background: rgba(157, 0, 255, 0.15); color: #b359ff; border: 1px solid rgba(157, 0, 255, 0.25); }
+.av-neon { background: rgba(0, 255, 204, 0.15); color: #00ffcc; border: 1px solid rgba(0, 255, 204, 0.25); }
+
+/* Progress Bar Ketinggian */
+.progress-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 130px;
+}
+
+.progress-bar {
+    height: 6px;
+    background: linear-gradient(90deg, #0084ff, #00bfff);
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 191, 255, 0.5);
+}
+
+.progress-container span {
+    font-size: 12px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* Badges Status Aktivitas */
+.status-badge {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+}
+.stable { background: rgba(0, 191, 255, 0.15); color: #00bfff; }
+.warning { background: rgba(255, 140, 0, 0.15); color: #ff8c00; }
+.safe { background: rgba(0, 255, 128, 0.15); color: #00ff80; }
+
+/* Badges Tingkat Kesulitan */
+.diff-badge {
+    padding: 4px 12px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.easy { background: rgba(46, 204, 113, 0.2); color: #2ecc71; }
+.medium { background: rgba(241, 196, 15, 0.2); color: #f1c40f; }
+.hard { background: rgba(230, 126, 34, 0.2); color: #e67e22; }
+.extreme { background: rgba(231, 76, 60, 0.2); color: #e74c3c; animation: flash 2s infinite; }
+
+@keyframes flash {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 1; box-shadow: 0 0 10px rgba(231, 76, 60, 0.4); }
+}
+
+/* Tombol Kompas Aksi */
+.btn-action {
+    background: rgba(0, 191, 255, 0.08);
+    border: 1px solid rgba(0, 191, 255, 0.2);
+    color: #00bfff;
+    padding: 8px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-action:hover {
+    background: #00bfff;
+    color: #040914;
+    box-shadow: 0 0 15px rgba(0, 191, 255, 0.5);
+}
+
+/* --- TOAST PANEL --- */
+.toast {
+    position: fixed;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, #0055ff, #00bfff);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 30px;
+    font-weight: 600;
+    box-shadow: 0 15px 30px rgba(0, 85, 255, 0.4);
+    transition: bottom 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 1000;
+}
+.toast.show { bottom: 40px; }
+
+/* --- RESPONSIVITAS MOBILE --- */
+@media screen and (max-width: 768px) {
+    .table-header { flex-direction: column; align-items: flex-start; }
+    .search-box { width: 100%; }
+    .controls-section { flex-direction: column; align-items: flex-start; }
+    .filter-buttons { overflow-x: auto; width: 100%; padding-bottom: 5px; }
+    .table-container { padding: 20px; }
+    td, th { padding: 14px 16px; font-size: 13px; }
+}
