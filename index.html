@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Wisata Pegunungan Indonesia</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styel.css">
+</head>
+<body>
+
+    <div class="table-container">
+        <div class="table-header">
+            <div class="header-text">
+                <h2><i class="fa-solid fa-mountain-sun icon-title"></i> Jelajah Puncak Indonesia</h2>
+                <p>Sistem informasi, tingkat kesulitan, dan monitoring status aktif pegunungan.</p>
+            </div>
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="mainSearch" placeholder="Cari nama gunung atau lokasi...">
+            </div>
+        </div>
+
+        <div class="controls-section">
+            <span class="filter-label"><i class="fa-solid fa-sliders"></i> Filter Kesulitan:</span>
+            <div class="filter-buttons">
+                <button class="btn-filter active" data-filter="all">Semua</button>
+                <button class="btn-filter" data-filter="Pemula">Pemula</button>
+                <button class="btn-filter" data-filter="Sedang">Sedang</button>
+                <button class="btn-filter" data-filter="Ahli/Ekstrem">Ahli & Ekstrem</button>
+            </div>
+        </div>
+
+        <div class="table-wrapper">
+            <table id="mountainTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nama Destinasi</th>
+                        <th>Lokasi Wilayah</th>
+                        <th>Rasio Ketinggian (mdpl)</th>
+                        <th>Daya Tarik Utama</th>
+                        <th>Status Aktivitas</th>
+                        <th>Tingkat Kesulitan</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-difficulty="Pemula">
+                        <td class="id-cell">#MNT-01</td>
+                        <td>
+                            <div class="mountain-profile">
+                                <div class="avatar av-blue">BM</div>
+                                <div>
+                                    <strong>Gunung Bromo</strong>
+                                    <span>Taman Nasional BTS</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Jawa Timur</td>
+                        <td>
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: 47%;"></div>
+                                <span>2.329</span>
+                            </div>
+                        </td>
+                        <td>Golden Sunrise & Kawah Aktif Megah</td>
+                        <td><span class="status-badge stable">Aktif Normal</span></td>
+                        <td><span class="diff-badge easy">Pemula</span></td>
+                        <td>
+                            <button class="btn-action" title="Lihat Jalur"><i class="fa-solid fa-compass"></i></button>
+                        </td>
+                    </tr>
+                    <tr data-difficulty="Ahli/Ekstrem">
+                        <td class="id-cell">#MNT-02</td>
+                        <td>
+                            <div class="mountain-profile">
+                                <div class="avatar av-cyan">RJ</div>
+                                <div>
+                                    <strong>Gunung Rinjani</strong>
+                                    <span>Pulau Lombok</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Nusa Tenggara Barat</td>
+                        <td>
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: 76%;"></div>
+                                <span>3.726</span>
+                            </div>
+                        </td>
+                        <td>Danau Segara Anak & Plawangan</td>
+                        <td><span class="status-badge warning">Waspada</span></td>
+                        <td><span class="diff-badge hard">Ahli</span></td>
+                        <td>
+                            <button class="btn-action" title="Lihat Jalur"><i class="fa-solid fa-compass"></i></button>
+                        </td>
+                    </tr>
+                    <tr data-difficulty="Pemula">
+                        <td class="id-cell">#MNT-03</td>
+                        <td>
+                            <div class="mountain-profile">
+                                <div class="avatar av-purple">PR</div>
+                                <div>
+                                    <strong>Gunung Prau</strong>
+                                    <span>Dataran Tinggi Dieng</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Jawa Tengah</td>
+                        <td>
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: 53%;"></div>
+                                <span>2.590</span>
+                            </div>
+                        </td>
+                        <td>Bukit Teletubbies & View 5 Gunung</td>
+                        <td><span class="status-badge stable">Aktif Normal</span></td>
+                        <td><span class="diff-badge easy">Pemula</span></td>
+                        <td>
+                            <button class="btn-action" title="Lihat Jalur"><i class="fa-solid fa-compass"></i></button>
+                        </td>
+                    </tr>
+                    <tr data-difficulty="Sedang">
+                        <td class="id-cell">#MNT-04</td>
+                        <td>
+                            <div class="mountain-profile">
+                                <div class="avatar av-blue">MB</div>
+                                <div>
+                                    <strong>Gunung Merbabu</strong>
+                                    <span>Boyolali / Magelang</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Jawa Tengah</td>
+                        <td>
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: 64%;"></div>
+                                <span>3.142</span>
+                            </div>
+                        </td>
+                        <td>Padang Sabana Hijau yang Luas</td>
+                        <td><span class="status-badge stable">Aktif Normal</span></td>
+                        <td><span class="diff-badge medium">Sedang</span></td>
+                        <td>
+                            <button class="btn-action" title="Lihat Jalur"><i class="fa-solid fa-compass"></i></button>
+                        </td>
+                    </tr>
+                    <tr data-difficulty="Ahli/Ekstrem">
+                        <td class="id-cell">#MNT-05</td>
+                        <td>
+                            <div class="mountain-profile">
+                                <div class="avatar av-neon">CZ</div>
+                                <div>
+                                    <strong>Puncak Carstensz</strong>
+                                    <span>Barisan Sudirman</span>
+                                </div>
+                            </div>
+                        </td>
+                        <td>Papua</td>
+                        <td>
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: 100%;"></div>
+                                <span>4.884</span>
+                            </div>
+                        </td>
+                        <td>Salju Abadi di Wilayah Tropis</td>
+                        <td><span class="status-badge safe">Aman</span></td>
+                        <td><span class="diff-badge extreme">Ekstrem</span></td>
+                        <td>
+                            <button class="btn-action" title="Lihat Jalur"><i class="fa-solid fa-compass"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
